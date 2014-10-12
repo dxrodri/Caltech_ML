@@ -110,7 +110,7 @@ train <- function(runId, trainingPoints,maxIteration) {
      #adjust the weight in the orientation by a learning rate of [1,-1]
      weights$w1 = weights$w1 + (misClassifiedPoint$x*(misClassifiedPoint$targetFunctionValue))
      weights$w2 = weights$w2 + (misClassifiedPoint$y*(misClassifiedPoint$targetFunctionValue))
-     weightsCoefficient = misClassifiedPoint$targetFunctionValue #change the orientation
+     weightsCoefficient = weightsCoefficient + misClassifiedPoint$targetFunctionValue #change the orientation
 
      #print(paste("Adjusted weights ", weights[1], "", weights[2]))
      iterationCount =  iterationCount+1
